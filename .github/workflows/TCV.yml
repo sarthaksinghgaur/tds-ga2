@@ -1,0 +1,16 @@
+name: Trigger Commit
+
+on:
+  workflow_dispatch:
+    inputs:
+      email:
+        description: "Email for commit step"
+        required: true
+        type: string
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ${{ inputs.email }}
+        run: echo "Hello, world!"
