@@ -24,4 +24,5 @@ async def root_api(name: List[str] = Query(...)):
         if student in students:
             marks.append(students[student])
             
+            
     return {"marks": marks}
